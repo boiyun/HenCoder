@@ -85,7 +85,7 @@ http://hencoder.com/users?gender=male
         ```        @FormUrlEncoded
         @POST("/users")
         Call<User> addUser(@Field("name") String name, @Field("gender") String gender);
-    ```
+        ```
    * `multipart/form-data:`二进制数据，如上传图片，文件
         格式如下：
         
@@ -115,9 +115,9 @@ http://hencoder.com/users?gender=male
         RequestBody namePart = RequestBody.create(MediaType.parse("text/plain"),
         nameStr);
         RequestBody avatarPart = RequestBody.create(MediaType.parse("image/jpeg"),
-avatarFile);
-api.addUser(namePart, avatarPart);
-    ```
+        avatarFile);
+        api.addUser(namePart, avatarPart);
+        ```
       boundary: 分块(part)（浏览器或okhttp自动生成）
    * `application/json:`json形式，用于Web Api的响应或POST/PUT请求
      格式如下：
@@ -134,7 +134,7 @@ api.addUser(namePart, avatarPart);
         Call<User> addUser(@Body("user") User user);
         // 需要使⽤用 JSON 相关的 Converter
         api.addUser(user);
-    ```
+        ```
    * image/jpeg：单文件(知道的人少，几乎不用)
 
       请求中提交二进制数据:
