@@ -1,15 +1,15 @@
 # HTTP 
 > ⼀种⽹络传输协议，位于 TCP / IP 协议族的最顶层——应用层.用于传输超文本的协议。和 HTML (Hypertext Markup Language 超⽂本标记 语言) 一起诞⽣生，⽤于在⽹络上请求和传输 HTML 内容。
 
-##HTTP的工作方式：
-###浏览器：
+## HTTP的工作方式：
+### 浏览器：
 用户输入地址后回车或点击链接->浏览器拼装HTTP报文并发送给服务器，服务器处理后发送响应报文发回给浏览器->浏览器解析响应报文并使用渲染引擎显示到界面。
-###手机App：
+### 手机App：
 用户点击或界面自动触发联网需求->Android代码调用拼装HTTP报文并发送请求到服务器->服务器处理请求后发送响应报文给手机->Android代码处理响应报文并作出相应处理（如存储数据、加工数据、显示数据到界面）
-##URL格式：
+## URL格式：
 协议类型：//服务器地址[：端口号]路径   
 http://hencoder.com/users?gender=male
-##请求报文
+## 请求报文
 请求报文格式：请求行、Headers、Body 
 
 * 请求行:Method、Path、HTTP Version
@@ -17,7 +17,7 @@ http://hencoder.com/users?gender=male
 * Body：要发送给服务器的内容
 
 ![](/Users/chenbo/Desktop/hencoder_pic/request.png)
-##响应报文
+## 响应报文
 响应报文格式：状态行、Headers、Body
 
 * 状态行:HTTP Version、Status Code、Status Message
@@ -168,13 +168,13 @@ api.addUser(namePart, avatarPart);
     `Range: bytes=<start>-<end>` 请求报⽂中出现，表示要取哪段数据   
     `Content-Range:<start>-<end>/total` 响应报⽂中出现，表示发送的是哪段数据
 
-##其他Headers
+## 其他Headers
 * Accept：客户端能接受的数据类型。如 text/html
 * Accept-Charset：客户端接受的字符集。如 utf-8
 * Accept-Encoding：客户端接受的压缩编码类型。如 gzip
 * Content-encoding: 压缩类型。gzip,deflate,br
 
-##Cache
+## Cache
 > 作用：在客户端或中间⽹络节点缓存数据，降低从服务器取数据的频率，以提⾼⽹络性能。
 
 ## REST
